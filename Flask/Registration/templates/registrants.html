@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    {% if not students %}
+        <h1>There are currently no registrants.</h1>
+    {% else %}
+        <h1>Registered Students:</h1>
+        <ul>
+        {% for student in students %}
+            <li>{{ student | replace("[", '') | replace("]", '') | replace("'", '') | replace(",", ' from ') }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+    <p><a href=/>Register another person</a></p>
+{% endblock %}

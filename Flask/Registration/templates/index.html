@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block body %}
+        <h1>Register for free donuts!</h1>
+        <form action="/registered" method="post">
+            <input name="name" placeholder="Full name" type="text">
+            <br><br>
+            <select name="classid">
+                <option disabled selected value="">Class</option>
+                <option value="5A">5A</option>
+                <option value="5B">5B</option>
+                <option value="5C">5C</option>
+                <option value="5D">5D</option>
+                <option value="5E">5E</option>
+                <option value="5F">5F</option>
+                <option value="5G">5G</option>
+                <option value="5H">5H</option>
+                <option value="5I">5I</option>
+                <option value="5J">5J</option>
+                <option value="5K">5K</option>
+                <option value="5L">5L</option>
+            </select>
+            <br><br>
+            <input type="submit" value="Register">
+            <br><br>
+            <p><a href=/registrants>Registrants</a></p>
+        </form>
+{% endblock %}
